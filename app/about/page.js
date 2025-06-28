@@ -27,7 +27,7 @@ export default function AboutPage() {
               height={400}
               className="rounded-xl shadow-md mb-4"
             />
-            <h2 className="text-3xl font-semibold text-green-900 mb-3">Managing Director's Message</h2>
+            <h2 className="text-3xl font-semibold text-green-900 mb-3">Managing Director&apos;s Message</h2>
             <p className="text-green-800 leading-relaxed">
               “At Ashamani Polyproducts, our commitment to sustainability drives every decision. We take pride in manufacturing environment-friendly plastic packaging that not only meets market demands but also contributes to a greener tomorrow.”
             </p>
@@ -42,7 +42,7 @@ export default function AboutPage() {
               height={400}
               className="rounded-xl shadow-md mb-4"
             />
-            <h2 className="text-3xl font-semibold text-green-900 mb-3">Executive Director's Message</h2>
+            <h2 className="text-3xl font-semibold text-green-900 mb-3">Executive Director&apos;s Message</h2>
             <p className="text-green-800 leading-relaxed">
               “We believe innovation and responsibility go hand in hand. Our team of 600+ skilled professionals and advanced machinery ensures quality, consistency, and a better future for our customers and the environment alike.”
             </p>

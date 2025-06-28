@@ -14,7 +14,7 @@ export default function EventsPage() {
         <h1 className="text-4xl font-bold text-green-900 mb-8 text-center">Our Events</h1>
 
         <p className="text-green-800 mb-10 max-w-3xl mx-auto text-center text-lg">
-          Ashamani Polyproducts takes pride in contributing to environmental awareness campaigns, factory inaugurations, employee wellness programs, and industry exhibitions. Here's a glimpse of some memorable moments.
+          Ashamani Polyproducts takes pride in contributing to environmental awareness campaigns, factory inaugurations, employee wellness programs, and industry exhibitions. Here&apos;s a glimpse of some memorable moments.
         </p>
 
         <div className="grid md:grid-cols-3 gap-8">
