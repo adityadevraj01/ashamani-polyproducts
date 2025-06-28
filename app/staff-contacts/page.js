@@ -54,12 +54,12 @@ export default function StaffContactsPage() {
         </div>
 
         {/* Floating Contact Now Button */}
-        <link
+        <Link
           href="/#enquiry-form"
           className="fixed bottom-6 right-6 bg-green-700 text-white p-4 rounded-full shadow-lg hover:bg-green-800 transition-all flex items-center gap-2 z-50"
         >
           📞 Contact Now
-        </link>
+        </Link>
       </div>
     <Footer/>
     </>
