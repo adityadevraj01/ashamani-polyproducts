@@ -5,8 +5,9 @@ import { Menu } from "@headlessui/react";
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center bg-green-800 text-white px-8 py-4 shadow-lg">
-      <Link href="/" className="text-2xl font-bold">Ashamani Polyproducts</Link>
+    <nav className="flex justify-between items-center bg-green-900/70 backdrop-blur text-white px-8 py-4 shadow-lg fixed w-full top-0 z-50">
+
+    <Link href="/" className="text-2xl font-bold">Ashamani Polyproducts</Link>
 
       <div className="flex items-center gap-6">
         <Link href="/" className="hover:underline">Home</Link>

@@ -26,4 +26,18 @@ body {
   background: transparent;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
+/* Scroll Snap container */
+.scroll-snap {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+/* Each snap section */
+.snap-section {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+

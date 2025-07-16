@@ -26,13 +26,14 @@ export default function HeroBanner() {
   className="relative h-[450px] bg-center bg-cover flex items-center justify-center transition-all duration-1000 ease-in-out"
   style={{ backgroundImage: `url('${images[currentImage]}')` }}
 >
+    <div className="absolute inset-0 bg-green-400 opacity-40 mix-blend-multiply transition-opacity duration-700"></div>
 
   <div className="relative z-10 text-center px-4">
     <h1 className="text-5xl font-bold text-white drop-shadow-lg mb-4">
-      Eco-Friendly Plastic Packaging
+      Eco-Friendly Plastic Bags
     </h1>
     <p className="text-lg text-green-100 max-w-xl mx-auto mb-6">
-      Sustainable plastic solutions that naturally degrade into soil within 2-3 years.
+      Sustainable handowen plastic that naturally degrade.
     </p>
 
     {/* Contact Now Dropdown */}
@@ -54,7 +55,7 @@ export default function HeroBanner() {
                 className={`${active ? "bg-green-100" : ""
                   } w-full text-left px-4 py-2 rounded text-green-800 font-medium`}
               >
-                📑 Fill Enquiry Form
+                📑 Fill Enquiry Form/Whatsapp Us
               </button>
             )}
           </Menu.Item>
@@ -65,7 +66,7 @@ export default function HeroBanner() {
                 className={`${active ? "bg-green-100" : ""
                   } w-full text-left px-4 py-2 block rounded text-green-800 font-medium`}
               >
-                📞 Call Staff / Direct Numbers
+                📞Call Us
               </a>
             )}
           </Menu.Item>
