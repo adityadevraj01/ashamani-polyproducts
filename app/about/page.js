@@ -203,10 +203,10 @@ export default function AboutPage() {
          <section className="bg-gray-900 text-center rounded-xl p-10 mb-16">
            <h2 className="text-3xl font-semibold text-yellow-400 mb-4">Our Story</h2>
            <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-             Founded in Balasore, Odisha, Ashamani Polyproducts began with a mission to offer sustainable packaging. Over the years, we’ve expanded 
+             Founded in Balasore, Odisha, Ashamani Polyproducts began with a mission to offer sustainable packaging. Over the years, we&aposve expanded 
              our reach into industrial, domestic, and agricultural sectors. Our biodegradable plastic solutions decompose within 2-3 years, making 
              us a proud contributor to environmental conservation.
-             Founded in Balasore, Odisha, Ashamani Polyproducts began with a mission to offer sustainable packaging. Over the years, we’ve expanded 
+             Founded in Balasore, Odisha, Ashamani Polyproducts began with a mission to offer sustainable packaging. Over the years, we&aposve expanded 
              our reach into industrial, domestic, and agricultural sectors. Our biodegradable plastic solutions decompose within 2-3 years, making 
              us a proud contributor to environmental conservation.
            </p>

@@ -1,9 +1,12 @@
 "use client";
+import Image from "next/image";
 
 export default function MachineryCard({ title, image, description }) {
   return (
     <div className="bg-white border border-green-200 rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
-      <img
+      <Image
+        width={300}
+        height={400}
         src={image}
         alt={title}
         className="w-full h-48 object-cover"

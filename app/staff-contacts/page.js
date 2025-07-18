@@ -99,7 +99,6 @@ export default function StaffContactsPage() {
 
       <main className="flex-grow pt-24 px-6">
         <h1 className="text-4xl font-bold text-green-900 mb-10 text-Left">Contact Our Team</h1>
-        <p className="text-green-900">You can visit our factory or you can contact us through mail/whatsapp.</p>
 
         <div className="max-w-3xl mx-auto grid gap-8">
           {staffList.map((staff, index) => (
