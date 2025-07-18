@@ -194,7 +194,7 @@ export default function AboutPage() {
           <h1 className="text-4xl font-bold text-yellow-400 mb-4">About Us</h1>
           <p className="text-lg leading-relaxed text-gray-300">
             Ashamani Polyproducts Pvt. Ltd. began its journey in Balasore, Odisha with a commitment to revolutionize the plastic industry through sustainability. 
-            From humble beginnings with a small setup, we’ve grown into a fully equipped factory employing over 600 skilled professionals.
+            From humble beginnings with a small setup, we&aposve grown into a fully equipped factory employing over 600 skilled professionals.
             Over the years, our dedication to eco-friendly innovation, customer trust, and quality manufacturing has made us a leading name in degradable plastic packaging.
           </p>
         </section>
