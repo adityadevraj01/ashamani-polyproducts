@@ -19,13 +19,13 @@ export default function Home() {
         {/* ✅ Home page products section */}
         <ProductDetailsSection />
 
-        <AwardsSection />
+        <WhyChooseUs />
 
         <div id="machinery-section">
           <MachineryDetailsSection />
         </div>
 
-        <WhyChooseUs />
+        <AwardsSection />
 
         <EnquiryForm />
         <Footer />

@@ -53,7 +53,7 @@ export default function ProductDetailsSection() {
 
   return (
     <section className="py-16 px-6 bg-gradient-to-b from-green-50 to-white">
-      <h2 className="text-4xl font-bold text-green-900 mb-8 text-center">Our Products</h2>
+      <h2 className="text-4xl font-bold text-green-900 mb-8 text-center">Explore Our Different Categories of Products</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {products.slice(0, 3).map((product, index) => (
