@@ -8,13 +8,13 @@ export default function DomesticUsePage() {
   const products = [
     {
       title: "Tarpauline",
-      image: "/images/products/tarpauline.jpg",
+      image: "/images/tarpauline.jpg",
       description:
         "Multi-purpose waterproof tarpaulins for household storage, roofing, and covering needs.",
     },
     {
       title: "Plantation Bags",
-      image: "/images/products/plantation-bags.jpg",
+      image: "/images/grow.jpg",
       description:
         "Durable grow bags ideal for home gardening and nursery plantation setups.",
     },
@@ -40,7 +40,7 @@ export default function DomesticUsePage() {
       </section>
 
       {/* Products Grid */}
-      <main className="px-6 md:px-20 pb-16">
+      <main className="px-6 md:px-20 pb-16 py-7">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product, index) => (
             <div

@@ -34,7 +34,7 @@ export default function AboutPage() {
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-10">
             <div>
               <Image
-                src="/images/ed.png"
+                src="/images/md.jpeg"
                 alt="Managing Director"
                 width={300}
                 height={300}

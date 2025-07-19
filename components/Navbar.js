@@ -1,168 +1,79 @@
-// // "use client";
-
-// // import Link from "next/link";
-// // import { Menu } from "@headlessui/react";
-
-// // export default function Navbar() {
-// //   return (
-// //     <nav className="flex justify-between items-center bg-green-900/70 backdrop-blur text-white px-8 py-4 shadow-lg fixed w-full top-0 z-50">
-
-// //     <Link href="/" className="text-2xl font-bold">Ashamani Polyproducts</Link>
-
-// //       <div className="flex items-center gap-6">
-// //         <Link href="/" className="hover:underline">Home</Link>
-
-// //         {/* Product Dropdown */}
-// //         <Menu as="div" className="relative">
-// //           <Menu.Button className="hover:underline">Products</Menu.Button>
-// //           <Menu.Items className="absolute mt-2 w-48 bg-white text-green-900 border border-green-200 rounded shadow-lg z-50">
-// //             <div className="p-1">
-// //               <Menu.Item>
-// //                 {({ active }) => (
-// //                   <Link
-// //                     href="/products#industrial"
-// //                     className={`block px-4 py-2 rounded ${active ? "bg-green-100" : ""
-// //                       }`}
-// //                   >
-// //                     Industrial
-// //                   </Link>
-// //                 )}
-// //               </Menu.Item>
-// //               <Menu.Item>
-// //                 {({ active }) => (
-// //                   <Link
-// //                     href="/products#domestic"
-// //                     className={`block px-4 py-2 rounded ${active ? "bg-green-100" : ""
-// //                       }`}
-// //                   >
-// //                     Domestic
-// //                   </Link>
-// //                 )}
-// //               </Menu.Item>
-// //               <Menu.Item>
-// //                 {({ active }) => (
-// //                   <Link
-// //                     href="/products#agricultural"
-// //                     className={`block px-4 py-2 rounded ${active ? "bg-green-100" : ""
-// //                       }`}
-// //                   >
-// //                     Agricultural
-// //                   </Link>
-// //                 )}
-// //               </Menu.Item>
-// //               <Menu.Item>
-// //                 {({ active }) => (
-// //                   <Link
-// //                     href="/products#customised"
-// //                     className={`block px-4 py-2 rounded ${active ? "bg-green-100" : ""
-// //                       }`}
-// //                   >
-// //                     Customised
-// //                   </Link>
-// //                 )}
-// //               </Menu.Item>
-// //             </div>
-// //           </Menu.Items>
-// //         </Menu>
-
-// //         <Link href="/about" className="hover:underline">About Us</Link>
-// //         <Link href="/events" className="hover:underline">Events</Link>
-
-// //         <Link href="/machineries" className="hover:underline">
-// //           Machineries
-// //         </Link>
-
-// //       </div>
-// //     </nav>
-// //   );
-// // }
 // "use client";
 
 // import Link from "next/link";
-// import { useState } from "react";
 // import { Menu } from "@headlessui/react";
-// import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+// import { Fragment } from "react";
 
 // export default function Navbar() {
-//   const [isOpen, setIsOpen] = useState(false);
+//   // Define products per category
+//   const productMap = {
+//     "Agricultural Use": ["Jumbo bags","Sponge iron bags","Mineral bags","Animal feed bags","Manure bags"],
+//     "Industrial Use": ["Manure packing bags","Paddy bags","Cereal bags","Pond-liner"],
+//     "Domestic Use": ["Tarpauline", "Plantation Bags"],
+//     "Special Products":["Jumbo Bags","Pond Liner"],
+    
+//   };
 
 //   return (
-//     <nav className="bg-green-900/70 backdrop-blur text-white px-6 py-4 shadow-lg fixed w-full top-0 z-50">
-//       <div className="flex justify-between items-center">
-//         <Link href="/" className="text-2xl font-bold">
-//           Ashamani Polyproducts
+//     <nav className="flex justify-between items-center bg-green-600/70 backdrop-blur text-white px-8 py-4 shadow-lg fixed w-full top-0 z-50">
+//       <Link href="/" className="text-2xl font-serif">
+//         Ashamani Polyproducts Pvt. Ltd.
+//       </Link>
+
+//       <div className="flex items-center gap-6">
+//         <Link href="/" className="hover:underline">
+//           Home
 //         </Link>
 
-//         {/* Mobile Hamburger */}
-//         <div className="md:hidden">
-//           <button onClick={() => setIsOpen(!isOpen)}>
-//             {isOpen ? (
-//               <XMarkIcon className="h-6 w-6 text-white" />
-//             ) : (
-//               <Bars3Icon className="h-6 w-6 text-white" />
-//             )}
-//           </button>
-//         </div>
+//         {/* Products Dropdown */}
+//         <Menu as="div" className="relative">
+//           {({ open }) => (
+//             <>
+//               <Menu.Button className="hover:underline">Products</Menu.Button>
+//               <Menu.Items className="absolute mt-2 w-60 bg-white text-green-900 border border-green-200 rounded shadow-lg z-50 p-2">
+//                 {Object.keys(productMap).map((category) => (
+//                   <Menu.Item key={category} as={Fragment}>
+//                     {({ active }) => (
+//                       <div className="group relative">
+//                         <Link
+//                           href={`/products/${category.toLowerCase().replace(/\s+/g, '-')}`}
+//                           className={`block px-4 py-2 rounded ${active ? "bg-green-100" : ""}`}
+//                         >
+//                           {category}
+//                         </Link>
 
-//         {/* Desktop Menu */}
-//         <div className="hidden md:flex items-center gap-6">
-//           <Link href="/" className="hover:underline">Home</Link>
+//                         {/* Submenu for each category */}
+//                         <div className="absolute left-full top-0 mt-0 ml-2 hidden group-hover:block w-48 bg-white border border-green-200 rounded shadow-md z-50">
+//                           <div className="p-2">
+//                             {productMap[category].map((product, index) => (
+//                               <div
+//                                 key={index}
+//                                 className="px-4 py-1 text-sm text-green-800 whitespace-nowrap"
+//                               >
+//                                 {product}
+//                               </div>
+//                             ))}
+//                           </div>
+//                         </div>
+//                       </div>
+//                     )}
+//                   </Menu.Item>
+//                 ))}
+//               </Menu.Items>
+//             </>
+//           )}
+//         </Menu>
 
-//           <Menu as="div" className="relative">
-//             <Menu.Button className="hover:underline">Products</Menu.Button>
-//             <Menu.Items className="absolute mt-2 w-48 bg-white text-green-900 border border-green-200 rounded shadow-lg z-50">
-//               <div className="p-1">
-//                 <Menu.Item>
-//                   {({ active }) => (
-//                     <Link href="/products#industrial" className={`block px-4 py-2 rounded ${active ? "bg-green-100" : ""}`}>
-//                       Industrial
-//                     </Link>
-//                   )}
-//                 </Menu.Item>
-//                 <Menu.Item>
-//                   {({ active }) => (
-//                     <Link href="/products#domestic" className={`block px-4 py-2 rounded ${active ? "bg-green-100" : ""}`}>
-//                       Domestic
-//                     </Link>
-//                   )}
-//                 </Menu.Item>
-//                 <Menu.Item>
-//                   {({ active }) => (
-//                     <Link href="/products#agricultural" className={`block px-4 py-2 rounded ${active ? "bg-green-100" : ""}`}>
-//                       Agricultural
-//                     </Link>
-//                   )}
-//                 </Menu.Item>
-//                 <Menu.Item>
-//                   {({ active }) => (
-//                     <Link href="/products#customised" className={`block px-4 py-2 rounded ${active ? "bg-green-100" : ""}`}>
-//                       Customised
-//                     </Link>
-//                   )}
-//                 </Menu.Item>
-//               </div>
-//             </Menu.Items>
-//           </Menu>
-
-//           <Link href="/about" className="hover:underline">About Us</Link>
-//           <Link href="/events" className="hover:underline">Events</Link>
-//           <Link href="/machineries" className="hover:underline">Machineries</Link>
-//         </div>
+//         <Link href="/about" className="hover:underline">
+//           About Us
+//         </Link>
+//         <Link href="/staff-contacts" className="hover:underline">
+//           Contact Us
+//         </Link>
+//         <Link href="/machineries" className="hover:underline">
+//           Infrastructure
+//         </Link>
 //       </div>
-
-//       {/* Mobile Menu Links */}
-//       {isOpen && (
-//         <div className="md:hidden mt-4 space-y-2">
-//           <Link href="/" className="block hover:underline">Home</Link>
-//           <Link href="/products#industrial" className="block hover:underline">Industrial</Link>
-//           <Link href="/products#domestic" className="block hover:underline">Domestic</Link>
-//           <Link href="/products#agricultural" className="block hover:underline">Agricultural</Link>
-//           <Link href="/products#customised" className="block hover:underline">Customised</Link>
-//           <Link href="/about" className="block hover:underline">About Us</Link>
-//           <Link href="/events" className="block hover:underline">Events</Link>
-//           <Link href="/machineries" className="block hover:underline">Machineries</Link>
-//         </div>
-//       )}
 //     </nav>
 //   );
 // }
@@ -170,78 +81,112 @@
 
 import Link from "next/link";
 import { Menu } from "@headlessui/react";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function Navbar() {
-  // Define products per category
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const productMap = {
-    "Agricultural Use": ["Jumbo bags","Sponge iron bags","Mineral bags","Animal feed bags","Manure bags"],
-    "Industrial Use": ["Manure packing bags","Paddy bags","Cereal bags","Pond-liner"],
+    "Agricultural Use": ["Jumbo bags", "Sponge iron bags", "Mineral bags", "Animal feed bags", "Manure bags"],
+    "Industrial Use": ["Manure packing bags", "Paddy bags", "Cereal bags", "Pond-liner"],
     "Domestic Use": ["Tarpauline", "Plantation Bags"],
-    "Special Products":["Jumbo Bags","Pond Liner"],
-    
+    "Special Products": ["Jumbo Bags", "Pond Liner"],
   };
 
   return (
-    <nav className="flex justify-between items-center bg-green-900/70 backdrop-blur text-white px-8 py-4 shadow-lg fixed w-full top-0 z-50">
-      <Link href="/" className="text-2xl font-bond">
-        Ashamani Polyproducts Pvt. Ltd.
-      </Link>
-
-      <div className="flex items-center gap-6">
-        <Link href="/" className="hover:underline">
-          Home
+    <>
+      <nav className="flex justify-between items-center bg-green-600/85 backdrop-blur text-white px-6 py-4 shadow-lg fixed w-full top-0 z-50">
+        <Link href="/" className="text-2xl font-serif">
+          Ashamani Polyproducts Pvt. Ltd.
         </Link>
 
-        {/* Products Dropdown */}
-        <Menu as="div" className="relative">
-          {({ open }) => (
-            <>
-              <Menu.Button className="hover:underline">Products</Menu.Button>
-              <Menu.Items className="absolute mt-2 w-60 bg-white text-green-900 border border-green-200 rounded shadow-lg z-50 p-2">
-                {Object.keys(productMap).map((category) => (
-                  <Menu.Item key={category} as={Fragment}>
-                    {({ active }) => (
-                      <div className="group relative">
-                        <Link
-                          href={`/products/${category.toLowerCase().replace(/\s+/g, '-')}`}
-                          className={`block px-4 py-2 rounded ${active ? "bg-green-100" : ""}`}
-                        >
-                          {category}
-                        </Link>
+        {/* Desktop Links */}
+        <div className="hidden md:flex items-center gap-6">
+          <Link href="/" className="hover:underline">Home</Link>
 
-                        {/* Submenu for each category */}
-                        <div className="absolute left-full top-0 mt-0 ml-2 hidden group-hover:block w-48 bg-white border border-green-200 rounded shadow-md z-50">
-                          <div className="p-2">
-                            {productMap[category].map((product, index) => (
-                              <div
-                                key={index}
-                                className="px-4 py-1 text-sm text-green-800 whitespace-nowrap"
-                              >
-                                {product}
-                              </div>
-                            ))}
+          {/* Products Dropdown */}
+          <Menu as="div" className="relative">
+            {({ open }) => (
+              <>
+                <Menu.Button className="hover:underline">Products</Menu.Button>
+                <Menu.Items className="absolute mt-2 w-60 bg-white text-green-900 border border-green-200 rounded shadow-lg z-50 p-2">
+                  {Object.keys(productMap).map((category) => (
+                    <Menu.Item key={category} as={Fragment}>
+                      {({ active }) => (
+                        <div className="group relative">
+                          <Link
+                            href={`/products/${category.toLowerCase().replace(/\s+/g, '-')}`}
+                            className={`block px-4 py-2 rounded ${active ? "bg-green-100" : ""}`}
+                          >
+                            {category}
+                          </Link>
+                          <div className="absolute left-full top-0 mt-0 ml-2 hidden group-hover:block w-48 bg-white border border-green-200 rounded shadow-md z-50">
+                            <div className="p-2">
+                              {productMap[category].map((product, index) => (
+                                <div key={index} className="px-4 py-1 text-sm text-green-800 whitespace-nowrap">
+                                  {product}
+                                </div>
+                              ))}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    )}
-                  </Menu.Item>
-                ))}
-              </Menu.Items>
-            </>
-          )}
-        </Menu>
+                      )}
+                    </Menu.Item>
+                  ))}
+                </Menu.Items>
+              </>
+            )}
+          </Menu>
 
-        <Link href="/about" className="hover:underline">
-          About Us
-        </Link>
-        <Link href="/events" className="hover:underline">
-          Events
-        </Link>
-        <Link href="/machineries" className="hover:underline">
-          Infrastructure
-        </Link>
-      </div>
-    </nav>
+          <Link href="/about" className="hover:underline">About Us</Link>
+          <Link href="/staff-contacts" className="hover:underline">Contact Us</Link>
+          <Link href="/machineries" className="hover:underline">Infrastructure</Link>
+        </div>
+
+        {/* Mobile Toggle Button */}
+        <button
+          className="md:hidden focus:outline-none"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? (
+            <XMarkIcon className="w-6 h-6 text-white" />
+          ) : (
+            <Bars3Icon className="w-6 h-6 text-white" />
+          )}
+        </button>
+      </nav>
+
+      {/* Mobile Menu Links */}
+      {menuOpen && (
+        <div className="md:hidden bg-green-700 text-white px-6 pt-20 pb-4 space-y-3 fixed top-0 left-0 right-0 z-40">
+          <Link href="/" className="block hover:underline">Home</Link>
+          <details>
+            <summary className="cursor-pointer hover:underline">Products</summary>
+            <div className="pl-4 mt-2 space-y-1 text-green-100">
+              {Object.entries(productMap).map(([category, items]) => (
+                <div key={category}>
+                  <Link href={`/products/${category.toLowerCase().replace(/\s+/g, '-')}`} className="block font-semibold">
+                    {category}
+                  </Link>
+                  <ul className="ml-4 text-sm list-disc">
+                    {items.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </details>
+          <Link href="/about" className="block hover:underline">About Us</Link>
+          <Link href="/staff-contacts" className="block hover:underline">Contact Us</Link>
+          <Link href="/machineries" className="block hover:underline">Infrastructure</Link>
+        </div>
+      )}
+
+      {/* Offset for navbar */}
+      <div className="pt-24 md:pt-0" />
+    </>
   );
 }
+

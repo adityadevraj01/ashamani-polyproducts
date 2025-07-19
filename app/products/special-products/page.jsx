@@ -7,26 +7,19 @@ import Navbar from "@/components/Navbar"; // Adjust path if needed
 export default function SpecialProductsPage() {
   const products = [
     {
-      title: "Anti-Slip Bags",
-      image: "/images/products/anti-slip.jpg",
-      description:
-        "Engineered with anti-slip coating for better stacking and safer handling in transit.",
+      title: "Jumbo Bags",
+      image: "/images/jumbo-bag.jpg",
+      description:"Jumbo bags are used for storing and transporting bulk materials like grains, chemicals, and construction aggregates.",
     },
     {
-      title: "Liner Bags",
-      image: "/images/products/liner-bag.jpg",
+      title: "Pond-liner Bags",
+      image: "/images/pond-liner.JPG",
       description:
-        "Protective liner-inserted bags to safeguard sensitive contents from moisture or contamination.",
-    },
-    {
-      title: "Perforated Bags",
-      image: "/images/products/perforated-bag.jpg",
-      description:
-        "Designed for ventilation, these bags are ideal for products requiring airflow such as vegetables or compost.",
+        "Pond liner bags are waterproof barriers, often made of durable materials like HDPE, used to line ponds and prevent water leakage, ensuring water conservation and long-term water storage. ",
     },
     {
       title: "Coloured Bags",
-      image: "/images/products/coloured-bag.jpg",
+      image: "/images/Animal-feed.jpg",
       description:
         "Custom-colored woven bags for branding, easy identification, and industry-specific requirements.",
     },
@@ -52,7 +45,7 @@ export default function SpecialProductsPage() {
       </section>
 
       {/* Products Grid */}
-      <main className="px-6 md:px-20 pb-16">
+      <main className="px-6 md:px-20 pb-16 py-7">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product, index) => (
             <div

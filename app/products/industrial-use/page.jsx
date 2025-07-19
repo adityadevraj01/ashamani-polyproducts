@@ -9,22 +9,22 @@ export default function IndustrialUsePage() {
     {
       title: "Manure Packing Bags",
       description: "Durable and eco-friendly bags designed to store and transport manure safely.",
-      image: "/images/products/manure-bags.jpg",
+      image: "/images/manure-bags.avif",
     },
     {
       title: "Paddy Bags",
       description: "Woven sacks ideal for bulk paddy storage, moisture-resistant and customizable.",
-      image: "/images/products/paddy-bags.jpg",
+      image: "/images/paddy-bags.avif",
     },
     {
       title: "Cereal Bags",
       description: "Protect your grains with our high-strength, tamper-proof woven bags.",
-      image: "/images/products/cereal-bags.jpg",
+      image: "/images/cereal-bags.avif",
     },
     {
       title: "Pond-liner",
       description: "Heavy-duty pond liners made for long-lasting water retention in agricultural and industrial ponds.",
-      image: "/images/products/pond-liner.jpg",
+      image: "/images/pond-liner.JPG",
     },
   ];
 
@@ -49,7 +49,7 @@ export default function IndustrialUsePage() {
 
 
       {/* Products Grid */}
-      <main className="px-6 md:px-20 pb-16">
+      <main className="px-6 md:px-20 pb-16 py-7">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product, index) => (
             <div

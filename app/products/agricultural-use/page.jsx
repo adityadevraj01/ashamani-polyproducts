@@ -8,38 +8,44 @@ export default function AgriculturalUsePage() {
   const products = [
     {
               title: "Jumbo Bags",
-              image: "/images/products/jumbo-bag.jpg",
+              image: "/images/jumbo-bag.jpg",
               description:
                 "Heavy-duty bags suitable for transporting agricultural produce and grains.",
             },
             {
               title: "Sponge Iron Bags",
-              image: "/images/products/sponge-iron.jpg",
+              image: "/images/sponge-iron.avif",
               description:
                 "Ideal for packing processed minerals and iron-based materials in farms.",
             },
             {
               title: "Mineral Bags",
-              image: "/images/products/mineral-bag.jpg",
+              image: "/images/mineral-bag.jpg",
               description:
                 "Durable bags for storing minerals or agricultural supplements.",
             },
             {
               title: "Animal Feed Bags",
-              image: "/images/products/animal-feed.jpg",
+              image: "/images/Animal-feed.jpg",
               description:
                 "UV-resistant woven sacks designed to safely store animal feed.",
             },
             {
               title: "Manure Bags",
-              image: "/images/products/manure.jpg",
+              image: "/images/manure.jpg",
               description:
                 "Strong and biodegradable bags perfect for packing and transporting manure.",
+            },
+            {
+              title: "Grow Bags",
+              image: "/images/grow.jpg",
+              description:
+                "Strong and biodegradable bags useful for plant care.",
             },
   ];
 
   return (
-    <div className="bg-white text-green-900 min-h-screen flex flex-col">
+    <div className="bg-white text-green-900 min-h-screen  flex flex-col">
       {/* Navbar */}
       <Navbar />
 
@@ -59,7 +65,7 @@ export default function AgriculturalUsePage() {
 
 
       {/* Products Grid */}
-      <main className="px-6 md:px-20 pb-16">
+      <main className="px-6 md:px-20 pb-16 py-7">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product, index) => (
             <div

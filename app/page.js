@@ -11,7 +11,7 @@ import WelcomeOverlay from "@/components/WelcomeMessage";
 export default function Home() {
   return (
     <>
-      <WelcomeOverlay />
+      {/* <WelcomeOverlay /> */}
       <Navbar />
       <main className="pt-4">
         <HeroBanner />
