@@ -1,147 +1,44 @@
-// "use client";
-// import { Menu } from "@headlessui/react";
-// import { useState, useEffect } from "react";
 
-// export default function HeroBanner() {
-//   const images = [
-//     "/images/hero-bg.jpg",
-//     // "/images/hero-bg2.jpg",
-//     // "/images/hero-bg3.jpg",
-//   ];
-
-//   const [currentImage, setCurrentImage] = useState(0);
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrentImage((prevIndex) =>
-//         prevIndex === images.length - 1 ? 0 : prevIndex 
-//       );
-//     }, 3500); // Change image every 3.5 seconds
-
-//     return () => clearInterval(interval);
-//   }, []);
-
-//   return (
-//  <div
-//   className="relative h-[450px] bg-center bg-cover flex items-center justify-center transition-all duration-1000 ease-in-out"
-//   style={{ backgroundImage: `url('${images[currentImage]}')` }}
-// >
-//     <div className="absolute inset-0 bg-green-400 opacity-40 mix-blend-multiply transition-opacity duration-700"></div>
-
-//   <div className="relative z-10 text-center px-4">
-//     <h1 className="text-5xl font-bold text-white drop-shadow-lg mb-4">
-//       Eco-Friendly Plastic Bags
-//     </h1>
-//     <p className="text-lg text-green-100 max-w-xl mx-auto mb-6">
-//       Sustainable handowen plastic that naturally degrade.
-//     </p>
-
-//     {/* Contact Now Dropdown */}
-//     <Menu as="div" className="relative inline-block text-left">
-//       <Menu.Button className="flex items-center gap-2 bg-green-700 text-white px-5 py-3 rounded-lg font-semibold hover:bg-green-800 transition-all duration-300 shadow-md hover:shadow-lg">
-//         📞 Contact Now
-//       </Menu.Button>
-
-//     <Menu.Items className="fixed-menu mt-3 w-56 origin-top bg-white border border-green-200 rounded-lg shadow-lg focus:outline-none right-0">
-//         <div className="p-2">
-//           <Menu.Item>
-//             {({ active }) => (
-//               <button
-//                 onClick={() =>
-//                   document
-//                     .getElementById("enquiry-form")
-//                     .scrollIntoView({ behavior: "smooth" })
-//                 }
-//                 className={`${active ? "bg-green-100" : ""
-//                   } w-full text-left px-4 py-2 rounded text-green-800 font-medium`}
-//               >
-//                 📑 Fill Enquiry Form/Whatsapp Us
-//               </button>
-//             )}
-//           </Menu.Item>
-//           <Menu.Item>
-//             {({ active }) => (
-//               <a
-//                 href="/staff-contacts"
-//                 className={`${active ? "bg-green-100" : ""
-//                   } w-full text-left px-4 py-2 block rounded text-green-800 font-medium`}
-//               >
-//                 📞Call Us
-//               </a>
-//             )}
-//           </Menu.Item>
-//         </div>
-//       </Menu.Items>
-//     </Menu>
-//   </div>
-// </div>
-
-//   );
-// }
-// "use client";
-// import { Menu } from "@headlessui/react";
-
-// export default function HeroBanner() {
-//   return (
-//     <div
-//       className="relative h-[450px] bg-center bg-cover flex items-center justify-center transition-all duration-1000 ease-in-out"
-//       style={{ backgroundImage: "url('/images/hero-backg.jpeg')" }}
-//     >
-//       <div className="absolute inset-0 bg-green-400 opacity-40 mix-blend-multiply transition-opacity duration-700"></div>
-
-//       <div className="relative z-10 text-center px-1">
-//         <h1 className="text-5xl font-bold text-white drop-shadow-lg mb-4">
-//           Eco-Friendly Plastic Bags
-//         </h1>
-//         <p className="text-lg text-green-100 max-w-xl mx-auto mb-6">
-//           Sustainable handowen plastic that naturally degrade.
-//         </p>
-
-//         {/* Contact Now Dropdown */}
-//         <Menu as="div" className="relative inline-block text-left">
-//           <Menu.Button className="flex items-center gap-2 bg-green-700 text-white px-5 py-3 rounded-lg font-semibold hover:bg-green-800 transition-all duration-300 shadow-md hover:shadow-lg">
-//             📞 Contact Now
-//           </Menu.Button>
-
-//           <Menu.Items className="fixed-menu mt-3 w-56 origin-top bg-white border border-green-200 rounded-lg shadow-lg focus:outline-none right-0">
-//             <div className="p-2">
-//               <Menu.Item>
-//                 {({ active }) => (
-//                   <button
-//                     onClick={() =>
-//                       document
-//                         .getElementById("enquiry-form")
-//                         .scrollIntoView({ behavior: "smooth" })
-//                     }
-//                     className={`${
-//                       active ? "bg-green-100" : ""
-//                     } w-full text-left px-4 py-2 rounded text-green-800 font-medium`}
-//                   >
-//                     📑 Fill Enquiry Form/Whatsapp Us
-//                   </button>
-//                 )}
-//               </Menu.Item>
-//               <Menu.Item>
-//                 {({ active }) => (
-//                   <a
-//                     href="/staff-contacts"
-//                     className={`${
-//                       active ? "bg-green-100" : ""
-//                     } w-full text-left px-4 py-2 block rounded text-green-800 font-medium`}
-//                   >
-//                     📞Call Us
-//                   </a>
-//                 )}
-//               </Menu.Item>
-//             </div>
-//           </Menu.Items>
-//         </Menu>
-//       </div>
-//     </div>
-//   );
-// }
 "use client";
 import { Menu } from "@headlessui/react";
+import Head from "next/head";
+
+<Head>
+  <title>Ashamani Polyproducts Pvt. Ltd. | Eco-Friendly Poly Bags Manufacturer in India</title>
+  <meta
+    name="description"
+    content="We manufacture eco-friendly HDPE, woven, and poly bags in various sizes, shapes, colors, and custom branding — suitable for factories, agriculture, and industrial packaging needs."
+  />
+  <meta
+    name="keywords"
+    content="eco-friendly poly bags, HDPE bags, woven bags, plastic packaging, biodegradable plastic bags, India packaging manufacturers, Ashamani Polyproducts"
+  />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charSet="UTF-8" />
+
+  {/* Open Graph for Facebook/LinkedIn */}
+  <meta property="og:title" content="Ashamani Polyproducts Pvt. Ltd." />
+  <meta
+    property="og:description"
+    content="Eco-friendly HDPE and poly bags manufacturer in India for industrial and agricultural use. Custom sizes, quality, and branding available."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.ashamanipolyproducts.com" />
+  <meta property="og:image" content="https://www.ashamanipolyproducts.com/images/hero-backg.jpeg" />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ashamani Polyproducts Pvt. Ltd." />
+  <meta
+    name="twitter:description"
+    content="Sustainable HDPE and poly bags crafted for every need. Woven, colorful, and biodegradable options available."
+  />
+  <meta name="twitter:image" content="https://www.ashamanipolyproducts.com/images/hero-backg.jpeg" />
+
+  {/* Favicon (Optional) */}
+  <link rel="icon" href="/favicon.ico" />
+</Head>
 
 export default function HeroBanner() {
   return (

@@ -1,53 +1,101 @@
 "use client";
 
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/components/Navbar"; // Adjust path if needed
+import Navbar from "@/components/Navbar";
 
 export default function AgriculturalUsePage() {
   const products = [
     {
-              title: "Jumbo Bags",
-              image: "/images/jumbo-bag.jpg",
-              description:
-                "Heavy-duty bags suitable for transporting agricultural produce and grains.",
-            },
-            {
-              title: "Sponge Iron Bags",
-              image: "/images/sponge-iron.avif",
-              description:
-                "Ideal for packing processed minerals and iron-based materials in farms.",
-            },
-            {
-              title: "Mineral Bags",
-              image: "/images/mineral-bag.jpg",
-              description:
-                "Durable bags for storing minerals or agricultural supplements.",
-            },
-            {
-              title: "Animal Feed Bags",
-              image: "/images/Animal-feed.jpg",
-              description:
-                "UV-resistant woven sacks designed to safely store animal feed.",
-            },
-            {
-              title: "Manure Bags",
-              image: "/images/manure.jpg",
-              description:
-                "Strong and biodegradable bags perfect for packing and transporting manure.",
-            },
-            {
-              title: "Grow Bags",
-              image: "/images/grow.jpg",
-              description:
-                "Strong and biodegradable bags useful for plant care.",
-            },
+      title: "Jumbo Bags",
+      image: "/images/jumbo-bag.jpg",
+      description:
+        "Heavy-duty bags suitable for transporting agricultural produce and grains.",
+    },
+    {
+      title: "Sponge Iron Bags",
+      image: "/images/sponge-iron.avif",
+      description:
+        "Ideal for packing processed minerals and iron-based materials in farms.",
+    },
+    {
+      title: "Mineral Bags",
+      image: "/images/mineral-bag.jpg",
+      description:
+        "Durable bags for storing minerals or agricultural supplements.",
+    },
+    {
+      title: "Animal Feed Bags",
+      image: "/images/Animal-feed.jpg",
+      description:
+        "UV-resistant woven sacks designed to safely store animal feed.",
+    },
+    {
+      title: "Manure Bags",
+      image: "/images/manure.jpg",
+      description:
+        "Strong and biodegradable bags perfect for packing and transporting manure.",
+    },
+    {
+      title: "Grow Bags",
+      image: "/images/grow.jpg",
+      description:
+        "Strong and biodegradable bags useful for plant care.",
+    },
   ];
 
   return (
-    <div className="bg-white text-green-900 min-h-screen  flex flex-col">
+    <div className="bg-white text-green-900 min-h-screen flex flex-col">
+      {/* SEO Head */}
+      <Head>
+        <title>Agricultural Use | HDPE & Poly Bags for Farming | Ashamani Polyproducts</title>
+        <meta
+          name="description"
+          content="Explore eco-friendly HDPE and poly bags for agricultural use — manure bags, grow bags, feed bags, and more. High-quality and customizable."
+        />
+        <meta
+          name="keywords"
+          content="agricultural packaging, HDPE grow bags, manure bags, poly bags for farming, animal feed sacks, eco-friendly plastic bags"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="UTF-8" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Agricultural Use Poly Bags | Ashamani Polyproducts" />
+        <meta
+          property="og:description"
+          content="Durable, eco-conscious HDPE and woven bags for agriculture: manure, minerals, grow bags, and more."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://www.ashamanipolyproducts.com/images/backg.jpeg"
+        />
+        <meta
+          property="og:url"
+          content="https://www.ashamanipolyproducts.com/products/agricultural-use"
+        />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Agricultural HDPE Bags | Ashamani Polyproducts" />
+        <meta
+          name="twitter:description"
+          content="UV-resistant, biodegradable, and customizable agricultural packaging solutions from Ashamani Polyproducts."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.ashamanipolyproducts.com/images/backg.jpeg"
+        />
+
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       {/* Navbar */}
       <Navbar />
+
 
       {/* Hero Banner */}
      <section
