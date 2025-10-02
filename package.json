@@ -2,11 +2,13 @@
   "name": "polyproduct-site",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "tailwindcss -v > /dev/null 2>&1 || true"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",
@@ -20,6 +22,8 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/node": "24.6.2",
+    "@types/react": "19.2.0",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
     "tailwindcss": "^4"

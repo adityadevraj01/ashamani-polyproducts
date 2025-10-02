@@ -42,7 +42,7 @@ import EnquiryForm from "../components/EnquiryForm";
 import ProductDetailsSection from "../components/ProductDetailsSection";
 import MachineryDetailsSection from "../components/MachineryDetailsSection";
 import Footer from "../components/Footer";
-import WelcomeOverlay from "@/components/WelcomeMessage";
+
 
 export default function Home() {
   return (

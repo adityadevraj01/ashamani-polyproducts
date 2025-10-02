@@ -3,7 +3,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
+import Navbar from "../../../components/Navbar";
 
 export default function AgriculturalUsePage() {
   const products = [
@@ -148,17 +148,17 @@ export default function AgriculturalUsePage() {
           <div>
             <h5 className="font-semibold text-lg mb-2">Quick Links</h5>
             <ul className="space-y-1 text-sm">
-              <li><Link href="/" className="hover:underline">Home</Link></li>
+            <li><Link href="/" className="hover:underline">Home</Link></li>
               <li><Link href="/about" className="hover:underline">About Us</Link></li>
-              <li><Link href="/events" className="hover:underline">Events</Link></li>
+              <li><Link href="/staff-contacts" className="hover:underline">Contact Us</Link></li>
               <li><Link href="/machineries" className="hover:underline">Infrastructure</Link></li>
             </ul>
           </div>
           <div>
             <h5 className="font-semibold text-lg mb-2">Contact</h5>
-            <p className="text-sm text-gray-200">📍 Nayagarh, Odisha, India</p>
-            <p className="text-sm text-gray-200">📞 +91 93375 53572</p>
-            <p className="text-sm text-gray-200">✉️ devrajaditya123@gmail.com</p>
+            <p className="text-sm text-gray-200">📍 Balasore, Odisha, India</p>
+            <p className="text-sm text-gray-200">📞 +91 7381210096</p>
+            <p className="text-sm text-gray-200">✉️ info@ashamani.in</p>
           </div>
         </div>
         <div className="text-center text-sm text-gray-400 mt-6">

@@ -10,9 +10,9 @@ export default function MachineryDetailsSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <MachineryCard
-          title="Cutting Machine"
+          title="Rolling Machine"
           image="/images/m1.jpeg"
-          description="Precision cutting for industrial plastic rolls."
+          description="Creating industrial plastic rolls."
         />
         <MachineryCard
           title="Threading Machine"
